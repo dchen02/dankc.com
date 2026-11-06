@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Dan Chen — Industrial Design Architect & Hardware Prototyper at Meta with 13+ years of experience. MIT and RISD graduate. Specializing in hardware UX, device interaction, and product design. Previously at Culture Biosciences, MIT, IDEO, and Johnson & Johnson. TEDx speaker. Exhibited at Vitra Design Museum.">
+    <meta name="author" content="Dan K Chen">
+    <meta name="keywords"
+        content="dan k chen, dan chen, industrial design architect, hardware prototyper, HW UX designer, interaction design, MIT, RISD, Meta, Ray-Ban smart glasses, product design, prototyping, hardware design, mechanical engineering, device interaction, behavioral science, robotics, TEDx, Vitra Design Museum, IDEO, Johnson & Johnson, portfolio">
+    <meta property="og:title" content="Dan K Chen — Industrial Design Architect & Hardware Prototyper | Meta">
+    <meta property="og:description"
+        content="Industrial Design Architect at Meta with 13+ years of experience in hardware prototyping, device interaction, and product design. MIT & RISD educated. TEDx speaker.">
+    <meta property="og:image" content="https://danchen.me/assets/tsp2.jpg">
+    <meta property="og:url" content="https://danchen.me/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dan K Chen Portfolio">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dan K Chen — Industrial Design Architect & Hardware Prototyper | Meta">
+    <meta name="twitter:description"
+        content="Industrial Design Architect at Meta with 13+ years of experience in hardware prototyping, device interaction, and product design. MIT & RISD educated. TEDx speaker.">
+    <meta name="twitter:image" content="https://danchen.me/assets/tsp2.jpg">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://danchen.me/">
+    <title>Dan K Chen | Industrial Design Architect & Hardware Prototyper | Meta, MIT, RISD</title>
+    <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="assets/vendor/font-awesome/css/font-awesome.min.css" as="style">
+    <link rel="preload" href="assets/css/agency.css" as="style">
+    <link rel="preload" href="assets/tsp2.jpg" as="image">
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/agency.css" rel="stylesheet">
+    <style>
+        /* Modern CSS Variables for consistent theming */
+        :root {
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --shadow-strong: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Page load fade-in */
+        body {
+            opacity: 0;
+            animation: pageFadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes pageFadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Scroll-triggered animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition-smooth);
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: var(--transition-smooth);
+        }
+
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: var(--transition-smooth);
+        }
+
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: var(--transition-smooth);
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Staggered animation delays */
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+        .delay-400 { transition-delay: 0.4s; }
+
+        .modal-backdrop {
+            background-color: #1a3a5c !important;
+            opacity: 0.75 !important;
+            backdrop-filter: blur(8px);
+            transition: var(--transition-smooth);
+        }
+
+        .modal-backdrop.in {
+            opacity: 0.75 !important;
+        }
+
+        .portfolio-modal .modal-dialog {
+            margin: 60px auto;
+            height: auto;
+            max-width: 800px;
+            width: 90%;
+            transform: scale(0.9);
+            transition: var(--transition-bounce);
+        }
+
+        .portfolio-modal.in .modal-dialog {
+            transform: scale(1);
+        }
+
+        .portfolio-modal .modal-content {
+            background-color: #ffffff !important;
+            border-radius: 16px;
+            min-height: auto;
+            padding: 40px 30px;
+            box-shadow: var(--shadow-strong);
+            position: relative;
+            border: none;
+        }
+
+        .portfolio-modal .close-modal {
+            top: 8px;
+            right: 8px;
+            width: 24px;
+            height: 24px;
+            z-index: 1060;
+            transition: var(--transition-smooth);
+        }
+
+        .portfolio-modal .close-modal:hover {
+            transform: rotate(90deg);
+        }
+
+        .portfolio-modal .close-modal .lr {
+            height: 24px;
+            width: 2px;
+            margin-left: 11px;
+            background-color: #666 !important;
+            transition: var(--transition-smooth);
+        }
+
+        .portfolio-modal .close-modal .lr .rl {
+            height: 24px;
+            width: 2px;
+            background-color: #666 !important;
+            transition: var(--transition-smooth);
+        }
+
+        .portfolio-modal .close-modal:hover .lr,
+        .portfolio-modal .close-modal:hover .lr .rl {
+            background-color: #333 !important;
+        }
+
+        .portfolio-modal .col-lg-8.col-lg-offset-2 {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        .portfolio-modal .modal-body {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .portfolio-modal .modal-body iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+
+        .portfolio-modal .container {
+            max-width: 100%;
+            padding: 0;
+        }
+
+        .intro-lead-in,
+        .intro-heading {
+            font-size: inherit;
+            font-weight: inherit;
+            margin: 0;
+        }
+
+        .chapter {
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        /* Subtle parallax and hover effect for chapters */
+        .chapter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+            opacity: 0;
+            transition: var(--transition-smooth);
+            pointer-events: none;
+        }
+
+        .chapter:hover::before {
+            opacity: 1;
+        }
+
+        /* Enhanced play button with pulse animation */
+        .play_button {
+            position: relative;
+            display: inline-block;
+            transition: var(--transition-bounce);
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+        }
+
+        .play_button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .play_button:hover {
+            transform: scale(1.15);
+            filter: drop-shadow(0 6px 20px rgba(0,0,0,0.3));
+        }
+
+        .play_button:hover::after {
+            animation: pulse 1.5s ease-out infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.8);
+                opacity: 0;
+            }
+        }
+
+        .add-link-btn {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-bounce);
+            overflow: hidden;
+        }
+
+        .add-link-btn::before {
+            content: '+';
+            color: #666;
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 1;
+            transition: var(--transition-smooth);
+            z-index: 2;
+            position: relative;
+        }
+
+        .add-link-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transform: translate(-50%, -50%);
+            transition: var(--transition-smooth);
+        }
+
+        .add-link-btn:hover {
+            transform: scale(1.15) rotate(90deg);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .add-link-btn:hover::after {
+            width: 100%;
+            height: 100%;
+        }
+
+        .add-link-btn:hover::before {
+            color: #fff;
+            transform: rotate(-90deg);
+        }
+
+        /* Enhanced header with parallax effect */
+        header {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #headerVideo {
+            transition: transform 0.1s linear;
+            will-change: transform;
+        }
+
+        /* Smooth link hover effects */
+        a {
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .linkout a {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: var(--transition-smooth);
+        }
+
+        .linkout a:hover {
+            background: rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+
+        /* Social buttons enhancement */
+        .social-buttons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.05);
+            transition: var(--transition-bounce);
+        }
+
+        .social-buttons a:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transform: translateY(-4px) scale(1.1);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .social-buttons a:hover i {
+            color: white !important;
+            transform: scale(1.1);
+        }
+
+        .social-buttons i {
+            transition: var(--transition-smooth);
+        }
+
+        /* Loading shimmer effect for images */
+        .chapter {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .fade-in-up,
+            .fade-in-left,
+            .fade-in-right {
+                transform: translateY(20px);
+            }
+
+            .play_button:hover {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+
+
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dan K Chen",
+      "url": "https://danchen.me/",
+      "sameAs": [
+        "https://www.linkedin.com/in/dankchen",
+        "https://www.instagram.com/danchen.me/",
+        "https://www.youtube.com/channel/UCQq4Uj0_3uKKDL20IRIwqQQ"
+      ],
+      "jobTitle": ["Industrial Design Architect", "Hardware Prototyper", "HW UX Designer"],
+      "image": "https://danchen.me/assets/tsp2.jpg",
+      "description": "Industrial Design Architect & Hardware Prototyper at Meta with 13+ years of experience in device interaction, hardware UX, and product design. MIT and RISD graduate. TEDx speaker.",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Massachusetts Institute of Technology",
+          "alternateName": "MIT"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Rhode Island School of Design",
+          "alternateName": "RISD"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Connecticut",
+          "alternateName": "UConn"
+        }
+      ],
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "Meta"
+        }
+      ],
+      "knowsAbout": [
+        "Interaction Design",
+        "Product Design",
+        "Industrial Design",
+        "Mechanical Engineering",
+        "Prototyping",
+        "Robotics",
+        "Behavioral Science",
+        "Hardware Design",
+        "Software Development"
+      ],
+      "award": [
+        "Exhibited at Vitra Design Museum",
+        "TEDx Vienna Speaker",
+        "TEDx Bologna Speaker",
+        "Featured at MAK Wien",
+        "Featured at Design Museum Gent",
+        "Featured at Seoul Museum of Art",
+        "Featured at Ars Electronica"
+      ]
+    }
+    </script>
+
+
+
+</head>
+
+
+
+
+<body id="page-top" class="index">
+
+
+    <header role="banner">
+        <video autoplay muted loop playsinline id="headerVideo" style="width: 100%" poster="assets/tsp2.jpg"
+            preload="metadata" aria-label="Background video showing Dan Chen's design work">
+            <source src="assets/tsp2.mp4" type="video/mp4">
+            <div class="container"></div>
+        </video>
+    </header>
+
+    <section id="chapter_top" class="chapter fade-in-up" style="padding: 8% 30px">
+        <div class="container">
+            <div class="intro-text">
+                <h1 style="font-size: inherit; font-weight: inherit; margin: 0;" class="fade-in-up delay-100">
+                    <p>Dan Chen — Industrial Design Architect<br />
+                        & Hardware Prototyper at Meta.<br />
+                        13+ years designing device interactions, hardware UX,<br />and products from concept through production.
+                    </p>
+                </h1><br />
+
+                <p class="linkout fade-in-up delay-200">
+                    <a href="https://dankc.com" target="_blank"> Works </a>
+                    &nbsp; |
+                    &nbsp;
+                    <a href="assets/dan_chen_resume.pdf" target="_blank">R&#233;sum&#233;</a>
+
+
+                    &nbsp; |
+                    &nbsp;
+                    <a href="https://www.instagram.com/danchen.me/" target="_blank">IG</a>
+
+                    <!-- &nbsp; |
+                    &nbsp; <a href="https://dankc.com" target="_blank"> Works </a>
+                    &nbsp; | &nbsp; <a href="assets/dan_thesis.pdf" target="_blank">Robotic Thesis</a>
+                -->
+
+                </p>
+
+                <br />
+                <hr class="fade-in-up delay-300">
+                <div class="intro-text fade-in-up delay-400" style="text-align: center;  color: #999999; font-size: 0.75em; padding-top: 5%">
+
+                    <p><strong>Currently at Meta</strong> — designing and prototyping next-generation smart glasses and wearable devices, including Meta Ray-Ban Smart Glasses.</p>
+
+                    <p><strong>Education:</strong> MAS, MIT Media Lab · MFA Digital Media, RISD · BFA Communication Design, UConn</p>
+
+                    <p><strong>Experience:</strong> Meta · Culture Biosciences (Senior Engineer) · MIT Lifelong Kindergarten · IDEO · Johnson &amp; Johnson</p>
+
+                    <p><strong>Core Skills:</strong> Industrial Design · Hardware Prototyping · Device Interaction Design · Mechanical Engineering · HW UX · Concept-to-Production · Behavioral Science · Robotics</p>
+
+                    <p><strong>Recognition:</strong> TEDx Vienna &amp; TEDx Bologna speaker · Exhibited at Vitra Design Museum, MAK Wien, Design Museum Gent, Seoul Museum of Art, Ars Electronica · Featured in CNET, The Verge, Engadget, Mashable, The Huffington Post</p>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="hide_extra">
+        <section id="chapter1" class="chapter fade-in-up" aria-label="Device Interaction Exploration 2023">
+            <div class="container">
+                <div class="intro-text white_text">
+                    <h2 class="intro-lead-in fade-in-left">2023 </h2>
+                    <h3 class="intro-heading fade-in-left delay-100"> Device Interaction Exploration </h3>
+                    <a href="#portfolioModal1" class="fa fa-5x fa-play-circle play_button scale-in delay-200" data-toggle="modal"
+                        aria-label="Watch Device Interaction Exploration video"></a>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <section id="chapter2" class="chapter fade-in-up" aria-label="Meta Ray-Ban Smart Glasses Project">
+        <div class="container">
+            <div class="intro-text ">
+                <h2 class="intro-lead-in fade-in-left">Industrial Design Architect / Hardware Prototyper </h2>
+                <h3 class="intro-heading fade-in-left delay-100">Meta Ray-Ban Smart Glasses </h3>
+                <a href="#" class=""></a>
+            </div>
+        </div>
+        <a href="https://dankc.com/dan-meta/" class="add-link-btn scale-in delay-200" aria-label="Add link"></a>
+    </section>
+
+
+
+    <section id="chapter3" class="chapter fade-in-up" aria-label="Culture Biosciences Engineering Work">
+        <div class="container">
+            <div class="intro-text ">
+                <h2 class="intro-lead-in fade-in-right">Senior Engineer: Hardware Design &amp; Bio Automation Systems</h2>
+                <h3 class="intro-heading fade-in-right delay-100"> Culture Biosciences </h3>
+                <a href="#" class=""></a>
+            </div>
+        </div>
+        <a href="https://dankc.com/dan-culture-biosciences/" class="add-link-btn scale-in delay-200" aria-label="Add link"></a>
+    </section>
+
+
+
+    <section id="chapter4" class="chapter fade-in-up" aria-label="Team Spirit Generator Project">
+        <div class="container">
+            <div class="intro-text white_text">
+                <h2 class="intro-lead-in fade-in-left">Art &amp; Design Work </h2>
+                <h3 class="intro-heading fade-in-left delay-100"> Team Spirit Generator </h3>
+                <a href="#portfolioModal4" class="fa fa-5x fa-play-circle play_button scale-in delay-200" data-toggle="modal"
+                    aria-label="Watch Team Spirit Generator video"></a>
+            </div>
+        </div>
+        <a href="https://dankc.com/team-spirit-generator/" class="add-link-btn scale-in delay-300" aria-label="Add link"></a>
+    </section>
+
+
+
+
+
+    <section id="chapter5" class="chapter fade-in-up" aria-label="Intimacy Machine Project">
+        <div class="container">
+            <div class="intro-text">
+                <h2 class="intro-lead-in fade-in-right">Art &amp; Design Work </h2>
+                <h3 class="intro-heading fade-in-right delay-100">Intimacy Machine </h3>
+                <a href="#portfolioModal5" class="fa fa-5x fa-play-circle play_button scale-in delay-200" data-toggle="modal"
+                    aria-label="Watch Intimacy Machine video"></a>
+            </div>
+        </div>
+        <a href="https://dankc.com/intimacy-machine/" class="add-link-btn scale-in delay-300" aria-label="Add link"></a>
+    </section>
+
+
+
+
+
+
+
+
+    <section id="chapter6" class="chapter fade-in-up" aria-label="End of Life Care Machine at Vitra Design Museum">
+        <div class="container">
+            <div class="intro-text ">
+                <h2 class="intro-lead-in fade-in-left">Exhibition: Hello Robot @ Vitra Design Museum </h2>
+                <h3 class="intro-heading fade-in-left delay-100"> End of Life Care Machine</h3>
+                <a href="#portfolioModal6" class="fa fa-5x fa-play-circle play_button scale-in delay-200" data-toggle="modal"
+                    aria-label="Watch End of Life Care Machine video"></a>
+            </div>
+        </div>
+        <a href="https://dankc.com/end-of-life-care-machine/" class="add-link-btn scale-in delay-300" aria-label="Add link"></a>
+    </section>
+
+
+
+
+
+
+
+    <section id="chapter7" class="chapter fade-in-up" aria-label="Cardboard CNC Lab Experiment">
+        <div class="container">
+            <div class="intro-text white_text">
+                <h2 class="intro-lead-in fade-in-right">Lab Experiment </h2>
+                <h3 class="intro-heading fade-in-right delay-100"> Cardboard CNC</h3>
+                <a href="#portfolioModal7" class="fa fa-5x fa-play-circle play_button scale-in delay-200" data-toggle="modal"
+                    aria-label="Watch Cardboard CNC video"></a>
+            </div>
+        </div>
+        <a href="https://dankc.com/cardboard-cnc/" class="add-link-btn scale-in delay-300" aria-label="Add link"></a>
+    </section>
+
+
+
+
+
+
+
+
+
+    <section id="chapter8" class="chapter fade-in-up" aria-label="TEDx Bologna Talk">
+        <div class="container">
+            <div class="intro-text white_text">
+                <h2 class="intro-lead-in fade-in-left"> </h2>
+                <h3 class="intro-heading fade-in-left delay-100"> Ted<span style="text-transform: lowercase">X</span> Bologna </h3>
+                <a href="#portfolioModal8" class="fa fa-5x fa-play-circle play_button scale-in delay-200" data-toggle="modal"
+                    aria-label="Watch TEDx Bologna talk"></a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section id="chapter9" class="chapter fade-in-up" aria-label="Scratch Puck Product Design">
+        <div class="container">
+            <div class="intro-text gray_text">
+                <h2 class="intro-lead-in fade-in-right"> Concepts, prototypes, and pre-production </h2>
+                <h3 class="intro-heading fade-in-right delay-100">Scratch Puck</h3>
+                <a href="#portfolioModal9" class="fa fa-5x fa-play-circle play_button scale-in delay-200" data-toggle="modal"
+                    aria-label="Watch Scratch Puck video"></a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section id="chapter14" class="chapter fade-in-up">
+        <div class="container">
+
+        </div>
+    </section>
+
+
+
+    <section id="chapter10" class="chapter fade-in-up" aria-label="TEDx Vienna Talk">
+        <div class="container">
+            <div class="intro-text white_text">
+                <h2 class="intro-lead-in fade-in-left"> </h2>
+                <h3 class="intro-heading fade-in-left delay-100"> Ted<span style="text-transform: lowercase">X</span> Vienna</h3>
+                <a href="#portfolioModal10" class="fa fa-5x fa-play-circle play_button scale-in delay-200" data-toggle="modal"
+                    aria-label="Watch TEDx Vienna talk"></a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="chapter11" class="chapter fade-in-up" aria-label="MIT Design and Manufacturing Teaching">
+        <div class="container">
+            <div class="intro-text">
+                <h2 class="intro-lead-in fade-in-right">Teaching & MIT</h2>
+                <h3 class="intro-heading fade-in-right delay-100">Design & Manufacturing </h3>
+                <a href="#portfolioModal11" class="fa fa-5x fa-play-circle play_button scale-in delay-200" data-toggle="modal"
+                    aria-label="Watch Design & Manufacturing video"></a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Services Section -->
+    <section id="services" class="fade-in-up">
+        <div class="container">
+
+            <div class="row text-center">
+                <div class="col-md-12">
+
+                    <h2 class="section-heading fade-in-up">Let's Connect</h2>
+                    <p class="fade-in-up delay-100">Interested in collaborating or discussing opportunities? Reach out directly.</p>
+
+
+                    <div class="fade-in-up delay-200">
+                        <script type="text/javascript">
+                            function gen_mail_to_link(lhs, rhs, subject) {
+                                document.write("<a href=\"mailto");
+                                document.write(":" + lhs + "@");
+                                document.write(rhs + "?subject=" + subject + "\">" + lhs + "@" + rhs + "<\/a>");
+                            }
+                        </script>
+                        <script type="text/javascript">
+                            gen_mail_to_link('dan', 'danchen.me', 'Reaching Out');
+                        </script>
+                        <noscript>
+                            <em>Email address protected by JavaScript. Activate JavaScript to see the email.</em>
+                        </noscript>
+                    </div>
+                    <br>
+                    <p class="fade-in-up delay-300"><a href="https://www.linkedin.com/in/dankc/" target="_blank">View LinkedIn Profile</a> &nbsp;|&nbsp; <a href="assets/dan_chen_resume.pdf" target="_blank">Download R&#233;sum&#233;</a></p>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="fade-in-up">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="scale-in delay-100"><a href="https://www.youtube.com/channel/UCQq4Uj0_3uKKDL20IRIwqQQ" target="_blank"><i
+                                    class="fa fa-youtube"></i></a>
+                        </li>
+                        <li class="scale-in delay-200"><a href="https://www.instagram.com/danchen.me/" target="_blank"><i
+                                    class="fa fa-instagram"></i></a>
+                        </li>
+
+                        <li class="scale-in delay-300"><a href="https://www.linkedin.com/in/dankc/" target="_blank"><i
+                                    class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks fade-in-up delay-200">
+                        <li><a href="https://dankc.com/" target="_blank">More Design Explorations</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+
+
+
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal close_chapter1" tsp2class="close-modal close_chapter1" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <iframe id="chapter1_video" width="100%" height="315"
+                                    data-src="https://www.youtube.com/embed/Ij11iMfH3Ro?si=3gBk6WBB0jXTMSZE&enablejsapi=1"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    loading="lazy" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal close_chapter5" tsp2class="close-modal close_chapter5" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <iframe id="chapter5_video" width="100%" height="315"
+                                    data-src="https://www.youtube.com/embed/-f_DJWCBetY?si=pW9RVakcJAOljtwU"
+                                    frameborder="0" loading="lazy" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal close_chapter6" tsp2class="close-modal close_chapter6" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <iframe id="chapter6_video" width="100%" height="315"
+                                    data-src="https://www.youtube.com/embed/WuYTfKMveLk?si=MQCsHKp2bzgsowle"
+                                    frameborder="0" loading="lazy" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Portfolio Modal 7 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal close_chapter7" tsp2class="close-modal close_chapter7" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <iframe id="chapter7_video" width="100%" height="315"
+                                    data-src="https://www.youtube.com/embed/YCiR1lHWCsA?si=xLVwgEuRZxRZasDv"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    loading="lazy" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Portfolio Modal 8 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal close_chapter8" tsp2class="close-modal close_chapter8" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <iframe id="chapter8_video" width="100%" height="315"
+                                    data-src="https://www.youtube.com/embed/gFId1hxmDlU?si=0YsT0M-EPDvkXk6U"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    loading="lazy" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal close_chapter4" tsp2class="close-modal close_chapter4" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <iframe id="chapter4_video" width="100%" height="315"
+                                    data-src="https://www.youtube.com/embed/GXAmH2GQSN4?enablejsapi=1" frameborder="0"
+                                    loading="lazy" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Portfolio Modal 9 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal close_chapter9" tsp2class="close-modal close_chapter9" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <iframe id="chapter9_video" width="100%" height="315"
+                                    data-src="https://www.youtube.com/embed/Mqd4ZPsrcPE?si=_eosO6pY1AGbktfR"
+                                    frameborder="0" loading="lazy" allowfullscreen></iframe>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Portfolio Modal 10 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal close_chapter10" tsp2class="close-modal close_chapter10" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <iframe id="chapter10_video" width="100%" height="315"
+                                    data-src="https://www.youtube.com/embed/SdB-DKdr-DU?si=SM7PnCUZ6R7eqp4K"
+                                    frameborder="0" loading="lazy" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Portfolio Modal 11 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal close_chapter11" tsp2class="close-modal close_chapter11" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <iframe id="chapter11_video" width="100%" height="315"
+                                    data-src="https://www.youtube.com/embed/WFL1Kk21EBE?si=Q6RysYbMlmNwkh8Z"
+                                    frameborder="0" loading="lazy" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
+
+
+    <!-- Theme JavaScript -->
+    <script src="assets/js/agency.min.js"></script>
+
+    <a class="play_button" href="#portfolioModal1" class="fa fa-5x fa-play-circle" data-toggle="modal"></a>
+
+
+
+    <script type="application/javascript">
+        $(document).ready(function () {
+
+            // Intersection Observer for scroll-triggered animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // Unobserve after animation to improve performance
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with animation classes
+            document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Parallax effect for header video
+            let ticking = false;
+            function updateParallax() {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('#headerVideo');
+                parallaxElements.forEach(el => {
+                    const speed = 0.5;
+                    el.style.transform = `translateY(${scrolled * speed}px)`;
+                });
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateParallax);
+                    ticking = true;
+                }
+            });
+
+            // Smooth reveal for chapters on scroll
+            const chapterObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll('.chapter').forEach(chapter => {
+                chapterObserver.observe(chapter);
+            });
+
+            $('.play_button').click(function () {
+                var modal = $(this).attr('href').replace('#portfolioModal', '');
+                modal = "#chapter" + modal + "_video";
+                var iframe = $(modal)[0];
+                if (iframe.dataset.src) {
+                    iframe.src = iframe.dataset.src + "?autoplay=1";
+                    delete iframe.dataset.src;
+                } else if (iframe.src) {
+                    iframe.src += "?autoplay=1";
+                }
+
+            });
+
+
+
+
+            $('.close-modal').click(function () {
+                var closeclass = $(this).attr('tsp2class');
+                closeclass = closeclass.replace('close-modal close_', '');
+                closeclass = "#" + closeclass + "_video";
+                var iframe = $(closeclass)[0];
+                if (iframe && iframe.src) {
+                    iframe.src = iframe.src.replace('?autoplay=1', '');
+                }
+
+                try {
+                    $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+                } catch (e) { }
+
+            });
+
+
+
+
+
+            // extra content
+
+            if (window.location.hash) {
+                var hash = window.location.hash.substring(1);
+                console.log("Extra Content");
+                $(".hide_extra").removeClass();
+
+
+            } else {
+                console.log("Normal Content");
+            }
+
+            // Add subtle hover effect to chapters
+            $('.chapter').hover(
+                function() {
+                    $(this).css('transform', 'translateY(-2px)');
+                },
+                function() {
+                    $(this).css('transform', 'translateY(0)');
+                }
+            );
+
+        });
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

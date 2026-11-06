@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/vendor/
+Disallow: /assets/mail/
+Disallow: /assets/scss/
+Disallow: /assets/less/
+
+Sitemap: https://danchen.me/sitemap.xml
