@@ -32,6 +32,9 @@ Based on v2 (`../index.html`, unchanged). Changes in this folder only:
 - Caveats: embeds load Instagram’s player, so they’re heavier than thumbnails and need Instagram to be reachable — they can show a login prompt / fail if Instagram blocks the viewer. Every embed has a reel link underneath as a fallback. A plain text fetch of the embed URL returned 403 (Instagram blocks bots), which is expected — it still plays in a normal browser. Check it in your browser when you preview.
 - If embeds feel too heavy / flaky, the thumbnail grid alone is the safer version — that’s v2.
 
+## Monochrome theme — gray, black, white, sharp corners (21 Nov 2026)
+- `styles.css` only: palette is now white / black / grays only (no warm off-white, no orange accent), and every `border-radius` is `0` — no pill buttons, no rounded cards, images, or embeds. Same layout and type as before, just the sharper monochrome look Dan asked for.
+
 ## Best-performing feed + less AI-sounding copy (20 Nov 2026)
 - Latest Work is now the 12 best-performing reels, ranked by lifetime Views (from the Nov 16 year review + Nov 20 fresh pull), not the 12 latest. Top 3: tower Dek00bJxYCi 1.32M, OLED glasses DcJ8duJB5ZU 231k, lamp DfI34K4RI0l 35k. Cutoff check ran before ranking: wearables sync DecBt73x6Du (5,963) and Porsche DfI4gADxjYp (4,076) made the cut; the Nov 19 key reel (3,426) and tower-detail Dek1c2BRZtg (3,666) did not.
 - The 3 featured embeds are now the top 3 by Views (tower, lamp, OLED glasses) — the tower first-cut DehLSHgxhcw (3 likes) is out of the embeds and out of the grid.
