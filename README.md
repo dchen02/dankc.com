@@ -35,6 +35,9 @@ Based on v2 (`../index.html`, unchanged). Changes in this folder only:
 ## Monochrome theme — gray, black, white, sharp corners (21 Nov 2026)
 - `styles.css` only: palette is now white / black / grays only (no warm off-white, no orange accent), and every `border-radius` is `0` — no pill buttons, no rounded cards, images, or embeds. Same layout and type as before, just the sharper monochrome look Dan asked for.
 
+## Hero lede removed (21 Nov 2026)
+- The first-person hero lede ("I'm Dan. I build small machines… Day job: Meta…") is out of `index.html` — Dan felt it read as not professional enough for job applications. The hero is now the eyebrow, the positioning headline, CTAs, hero image, and stats. The `.lede` CSS rule stays in `styles.css` (unused) in case a lede comes back.
+
 ## Best-performing feed + less AI-sounding copy (20 Nov 2026)
 - Latest Work is now the 12 best-performing reels, ranked by lifetime Views (from the Nov 16 year review + Nov 20 fresh pull), not the 12 latest. Top 3: tower Dek00bJxYCi 1.32M, OLED glasses DcJ8duJB5ZU 231k, lamp DfI34K4RI0l 35k. Cutoff check ran before ranking: wearables sync DecBt73x6Du (5,963) and Porsche DfI4gADxjYp (4,076) made the cut; the Nov 19 key reel (3,426) and tower-detail Dek1c2BRZtg (3,666) did not.
 - The 3 featured embeds are now the top 3 by Views (tower, lamp, OLED glasses) — the tower first-cut DehLSHgxhcw (3 likes) is out of the embeds and out of the grid.
