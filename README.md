@@ -35,6 +35,13 @@ Based on v2 (`../index.html`, unchanged). Changes in this folder only:
 ## Monochrome theme — gray, black, white, sharp corners (21 Nov 2026)
 - `styles.css` only: palette is now white / black / grays only (no warm off-white, no orange accent), and every `border-radius` is `0` — no pill buttons, no rounded cards, images, or embeds. Same layout and type as before, just the sharper monochrome look Dan asked for.
 
+## Embeds only — thumbnail grid removed (21 Nov 2026)
+- The 12-card thumbnail grid is gone from `index.html`, along with the script that filled it from `ig-feed.json` and the `.ig-grid` / `.ig-card` CSS. Why: the Instagram CDN thumbnail links are signed URLs that expire — checked 21 Nov, they return 403 — so 11 of 12 cards showed blank. The `onerror` hide made it look like empty cards instead of broken images.
+- Latest Work is now just the 3 featured Instagram embeds (tower, lamp, OLED glasses — the top 3 by Views). Embeds are served live by Instagram, so they don't expire.
+- Embed iframes are taller so the card doesn't inner-scroll: 720px desktop, 700px mobile (was 520px / 560px).
+- Both fineprint notes under Latest Work are removed ("Videos above play inside Instagram's own embed player…" and "Best-performing reels, ranked by lifetime Views…"). The footer fineprint stays.
+- `ig-feed.json` stays in the repo as the data record, but nothing on the page reads it anymore.
+
 ## Hero lede removed, professional line added (21 Nov 2026)
 - The first-person hero lede ("I'm Dan. I build small machines… Day job: Meta…") is out of `index.html` — Dan felt it read as not professional enough for job applications. In its place, under the headline: "AI Product Designer at Meta, working on Ray-Ban smart glasses. 13 years across hardware, software, and connected experiences." (same `.lede` style, new copy).
 
