@@ -38,7 +38,7 @@ Based on v2 (`../index.html`, unchanged). Changes in this folder only:
 ## Embeds only — thumbnail grid removed (21 Nov 2026)
 - The 12-card thumbnail grid is gone from `index.html`, along with the script that filled it from `ig-feed.json` and the `.ig-grid` / `.ig-card` CSS. Why: the Instagram CDN thumbnail links are signed URLs that expire — checked 21 Nov, they return 403 — so 11 of 12 cards showed blank. The `onerror` hide made it look like empty cards instead of broken images.
 - Latest Work is now just the featured Instagram embeds (tower, lamp, OLED glasses — the top 3 by Views). Embeds are served live by Instagram, so they don't expire.
-- 21 Nov 2026: 3 more embeds added — the next 3 by lifetime Views from the Nov 20 ranking: 16 lasers on 16 servos (DeNsgQYxhkX, 30k), motorized slider (DcdRCWthAba, 24k), how the transparent OLED glasses work (DcMdPNZh_bH, 10k). The section now shows 6 embeds in a 3×2 grid.
+- 21 Nov 2026: 3 more embeds added — the next 3 by lifetime Views from the Nov 20 ranking: 16 lasers on 16 servos (DeNsgQYxhkX, 30k), motorized slider (DcdRCWthAba, 24k), how the transparent OLED glasses work (DcMdPNZh_bH, 10k). The section now shows 6 embeds in a 3×2 grid. Embed iframe height set to 610px (desktop and mobile).
 - Embed iframes are taller so the card doesn't inner-scroll: 720px desktop, 700px mobile (was 520px / 560px).
 - Both fineprint notes under Latest Work are removed ("Videos above play inside Instagram's own embed player…" and "Best-performing reels, ranked by lifetime Views…"). The footer fineprint stays.
 - `ig-feed.json` stays in the repo as the data record, but nothing on the page reads it anymore.

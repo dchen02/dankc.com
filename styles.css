@@ -121,7 +121,7 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
 .embed-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0 0.5rem; }
 .embed-card { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 0; overflow: hidden; padding: 0.5rem; }
 .embed-card iframe {
-  display: block; width: 100%; height: 720px; border: 0; border-radius: 0; background: #fff;
+  display: block; width: 100%; height: 610px; border: 0; border-radius: 0; background: #fff;
 }
 .work-img {
   display: block; width: 100%; height: 180px; object-fit: cover;
@@ -134,5 +134,5 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
 }
 @media (max-width: 760px) {
   .embed-grid { grid-template-columns: 1fr; }
-  .embed-card iframe { height: 700px; }
+  .embed-card iframe { height: 610px; }
 }
